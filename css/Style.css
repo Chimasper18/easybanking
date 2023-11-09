@@ -1,0 +1,296 @@
+html,body{
+    scroll-behavior: smooth;
+}
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+.togglers{
+    display: none;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+a{
+    text-decoration: none;
+    color: #B4B7BD;
+}
+button{
+    color: white;
+    background: linear-gradient(to right,#30D162,#2BB9CF);
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 15px;
+    border: white;
+}
+main{
+    display: flex;
+    background-color:#F3F4F6;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+
+}
+.mainimage{
+    width: 50%;
+    padding: 20px 40px;
+}
+main div{
+    width: 50%;
+    padding: 20px 40px;
+}
+main h1{
+    font-size: 50px;
+    
+}
+main p{
+    font-size:20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.sectioncontainer{
+    padding:80px;
+    background-color: #FAFAFA;
+}
+.container, .containerdiv2{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+}
+
+.sectioncontainerdiv{
+    width: 50%;
+    margin-top:20px;
+    margin-bottom:60px;
+}
+
+.sectioncontainer h2{
+    font-size:40px;
+    
+}
+
+p{
+    font-size:15px;
+}
+
+.containerdiv2 > div{
+    box-shadow: 0px 0px 15px rgb(122, 122, 122);
+}
+
+.containerdiv2 > div > div{
+    padding: 20px;
+}
+
+.containerdiv2 img{
+    width: 100%;
+}
+
+.sectioncontainer2{
+    background-color: #F3F4F6;
+    padding: 20px 80px;
+}
+.sectioncontainer2 h3{
+    padding-bottom: 20px;
+}
+
+.sectioncontainer2 p{
+    font-size: 14px;
+}
+
+footer{
+    background-color: #2D314D;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 20px 30px 80px;
+    font-size: 14px;
+}
+
+.containerdiv2 a{
+    color: black;
+    font-size:20px;
+    padding-bottom: 20px;
+}
+
+.containerdiv2 p{
+    margin: 7px 0px;
+}
+
+footer img{
+    filter: invert(.3);
+}
+footer i,.last{
+    color:white;
+}
+.about{
+    display: flex;
+    justify-content: space-between;
+    gap: 70px;
+}
+
+.about ul{
+    text-decoration: none;
+    list-style:none;
+}
+.about ul a{
+    color:white;
+}
+.about li{
+    padding:5px;
+}
+.footerdiv{
+    margin-bottom: 25px;
+}
+
+@media screen and (max-width: 992px){
+    main h1{
+        font-size: 35px;
+    }
+    main p{
+        font-size: 15px;
+    }
+    main div, .mainimage{
+        padding:0;
+    }
+    .sectioncontainer{
+        padding:80px 40px;
+    }
+    .sectioncontainerdiv{
+        width:70%;
+    }
+    .containerdiv2{
+        gap:20px;
+    }
+    .containerdiv2 a{
+        font-size: 16px;
+    }
+    .sectioncontainer2{
+        padding: 20px 10px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    nav{
+        padding: 20px 10px;
+    }
+    .mainimage{
+        width:40%;
+    }
+    main h1{
+        font-size:25px;
+    }
+    .container, .containerdiv2{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .containerdiv2>div{
+        width:90%;
+        margin:0 auto;
+    }
+    footer{
+        padding:30px;
+    }
+    .about{
+        gap:30px;
+    }
+}
+@media screen and (max-width: 576px){
+    nav button{
+        display:none;
+    }
+    main h1{
+        font-size:20px;
+    }
+    main p{
+        font-size:14px;
+    }
+    .sectioncontainer h2{
+        font-size: 20px !important;
+        padding-bottom: 20px;
+    }
+    .sectioncontainer p{
+        font-size: 14px;
+    }
+    .containerdiv2 a{
+        font-size: 15px;
+    }
+    footer{
+        flex-direction:column;
+    }
+    .about{
+        justify-content:center;
+        margin: 20px 0;
+    }
+    .footerdiv{
+        text-align:center;
+    }
+    .footerdiv img{
+        margin-bottom:20px;
+    }
+
+    .togglers{
+        display:block;
+        font-size:20px;
+    }
+    .ri-close-line{
+        display:none;
+    }
+    nav ul{
+        position:fixed;
+        top:-40%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        flex-direction:column;
+        background-color: #dbdbdb;
+        box-shadow:0 0 8px #333;
+        width: 60%;
+        text-align:center;
+        padding: 20px;
+        transition:0.5s;
+        z-index:1;
+     }
+}
+
+@media screen and (max-width: 375px){
+    main{
+        flex-direction: column-reverse;
+        text-align:center;
+    }
+    .mainimage,main div{
+        width:90%;
+    }
+    .mainimage{
+        padding-bottom: 30px;
+    }
+    .sectioncontainer{
+        width:100%;
+        text-align:center;
+    }
+    .sectioncontainerdiv{
+        width:100%;
+    }
+    .sectioncontainer h2, main h1{
+        font-size: 30px !important;
+        font-weight: 400;
+    }
+    .container, .containerdiv2{
+        grid-template-columns: 1fr;
+    }
+    .about{
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+}
